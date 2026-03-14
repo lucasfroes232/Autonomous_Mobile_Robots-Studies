@@ -1,4 +1,4 @@
-# Autonomous Mobile Robots - UFSCar
+# Autonomous Mobile Robots - UFSCar 🤖
 
 This repository contains the projects and exercises developed for the **Autonomous Mobile Robots** course at the Federal University of São Carlos (UFSCar). The goal of this environment is to explore autonomous navigation, path planning, and perception for Unmanned Aerial Vehicles (UAVs).
 
