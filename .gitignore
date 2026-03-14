@@ -1,0 +1,68 @@
+# ==========================================
+# ROS 2 & Colcon Workspace
+# ==========================================
+# Pastas geradas automaticamente durante a compilação
+build/
+install/
+log/
+# Ignora a pasta src oculta do rosdep se existir
+.ros/
+
+# ==========================================
+# C++ & Binários
+# ==========================================
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+*.out
+*.app
+*.dylib
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==========================================
+# VS Code & Dev Containers
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+# Opcional: Descomente a linha abaixo se não quiser compartilhar as configurações locais do VS Code
+# .vscode/
+
+# ==========================================
+# Sistema Operacional & Editores de Texto
+# ==========================================
+# Arquivos temporários do Nano, Gedit e Terminator
+*~
+.*.sw[a-p]
+.*.swo
+*.tmp
+# Arquivos de sistema (caso alguém abra o repo no Mac ou Windows)
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Gazebo & Simulação
+# ==========================================
+# Ignora modelos em cache e logs pesados do Gazebo
+~/.gazebo/models/
+~/.ignition/

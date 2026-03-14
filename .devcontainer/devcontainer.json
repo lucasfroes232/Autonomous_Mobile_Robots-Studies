@@ -1,0 +1,32 @@
+{
+  "name": "ROS 2 Jazzy - Autonomous Mobile Robots",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--net=host",
+    "--ipc=host",
+    "--privileged",
+    "-e", "DISPLAY=${env:DISPLAY}",
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+    "--device=/dev/dri"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "ms-iot.vscode-ros"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "postCreateCommand": "echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
+}
