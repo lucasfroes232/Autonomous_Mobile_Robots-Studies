@@ -24,7 +24,7 @@ The environment is fully containerized to ensure reproducibility and to isolate 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/lucasfroes232/autonomous_mobile_robots.git](https://github.com/lucasfroes232/autonomous_mobile_robots.git)
+    git clone https://github.com/lucasfroes232/autonomous_mobile_robots.git
     cd autonomous_mobile_robots
     ```
 
