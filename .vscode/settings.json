@@ -1,3 +1,11 @@
 {
-    "ROS2.distro": "jazzy"
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/workspaces/autonomous_mobile_robots/install/py_turtle_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/workspaces/autonomous_mobile_robots/install/py_turtle_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
 }

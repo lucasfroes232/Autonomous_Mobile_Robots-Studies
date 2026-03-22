@@ -30,3 +30,4 @@
   "remoteUser": "root",
   "postCreateCommand": "echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
+
