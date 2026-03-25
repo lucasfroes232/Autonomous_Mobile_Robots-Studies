@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'turtle_controller = py_turtle_controller.template_turtle_controller:main'
+            'turtle_controller = py_turtle_controller.template_turtle_controller:main',
+            'turtle_pid = py_turtle_controller.turtle_pid_controller:main'
         ],
     },
 )
