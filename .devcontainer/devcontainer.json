@@ -28,6 +28,6 @@
     }
   },
   "remoteUser": "root",
-  "postCreateCommand": "echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
+  "postCreateCommand": "echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc && echo 'source /opt/turtlebot4_ws/install/setup.bash' >> ~/.bashrc && echo 'if [ -f ${containerWorkspaceFolder}/install/setup.bash ]; then source ${containerWorkspaceFolder}/install/setup.bash; fi' >> ~/.bashrc && git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
 
