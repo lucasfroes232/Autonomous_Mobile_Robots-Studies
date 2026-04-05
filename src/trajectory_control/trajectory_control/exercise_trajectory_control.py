@@ -9,7 +9,7 @@ import time
 from tf_transformations import euler_from_quaternion
 
 N_WAYPOINTS = 3
-DESORIENTATION_TOLERANCE = 0.1
+DESORIENTATION_TOLERANCE = 0.05
 DIST_TOLERANCE = 0.3
 
 class PID_TurtleController(Node):
@@ -38,7 +38,7 @@ class PID_TurtleController(Node):
         self.theta = None
 
         # Timer para o loop de controle (mesmo intervalo do arquivo base: 0.5s → mantido em 0.1s para o PID)
-        self.timer = self.create_timer(0.1, self.PID_control_loop)
+        self.timer = self.create_timer(0.05, self.PID_control_loop)
 
         # Cria waypoints aleatórios
         self.createWayPoints()
@@ -68,8 +68,8 @@ class PID_TurtleController(Node):
         """Gera N_WAYPOINTS aleatórios (ajuste o range conforme o ambiente do seu robô)."""
         self.waypoints = [
             (
-                random.uniform(-3.0, 3.0),
-                random.uniform(-3.0, 3.0)
+                random.uniform(-13.5, 0.5),
+                random.uniform(-1.2, 1.2) 
             ) for _ in range(N_WAYPOINTS)
         ]
         self.get_logger().info(f"{N_WAYPOINTS} pontos definidos:")
@@ -86,7 +86,7 @@ class PID_TurtleController(Node):
         _, _, yaw = euler_from_quaternion([q.x, q.y, q.z, q.w])
         self.theta = yaw
 
-    def PID_control_loop(self, Kp=1.0, Ki=0.1, Kd=0.1):
+    def PID_control_loop(self, Kp=2.0, Ki=0.1, Kd=0.1):
         """Loop de controle PID — equivalente direto ao do turtlesim."""
 
         # Aguarda a primeira leitura de odometria
